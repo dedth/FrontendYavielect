@@ -11,8 +11,6 @@ import {InputNumberModule} from 'primeng/inputnumber';
 import {InputSwitchModule} from "primeng/inputswitch";
 import {CalendarModule} from "primeng/calendar";
 import {PanelModule} from "primeng/panel";
-import {PersonComponent} from "./person/person.component";
-import { PersonListComponent } from './person-list/person-list.component';
 import {TableModule} from "primeng/table";
 import { AutomovilListComponent } from './automovil-list/automovil-list.component';
 import { AutomovilComponent } from './automovil/automovil.component';
@@ -21,8 +19,6 @@ import { AutomovilComponent } from './automovil/automovil.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PersonComponent,
-    PersonListComponent,
     AutomovilListComponent,
     AutomovilComponent
     
