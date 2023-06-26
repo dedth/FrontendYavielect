@@ -12,15 +12,25 @@ import {InputSwitchModule} from "primeng/inputswitch";
 import {CalendarModule} from "primeng/calendar";
 import {PanelModule} from "primeng/panel";
 import {TableModule} from "primeng/table";
-import { AutomovilListComponent } from './automovil-list/automovil-list.component';
-import { AutomovilComponent } from './automovil/automovil.component';
+import {MegaMenuModule } from 'primeng/megamenu';
+import {RouterModule } from '@angular/router';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+
+import {MenuComponent } from './menu/menu.component';
+import {VotanteComponent } from './votantes/votante/votante.component';
+import {VotanteListaComponent } from './votantes/votante-lista/votante-lista.component';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutomovilListComponent,
-    AutomovilComponent
+    MenuComponent,
+    VotanteComponent,
+    VotanteListaComponent,
+
     
   ],
   imports: [
@@ -29,6 +39,7 @@ import { AutomovilComponent } from './automovil/automovil.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MegaMenuModule, 
 
     ButtonModule,
     InputNumberModule,
@@ -37,6 +48,8 @@ import { AutomovilComponent } from './automovil/automovil.component';
     CalendarModule,
     PanelModule,
     TableModule,
+    CascadeSelectModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

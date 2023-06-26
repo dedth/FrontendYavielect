@@ -1,0 +1,122 @@
+<div class="formgrid grid  formulario " >
+    <div class="col-6">
+      <p-panel header="Reactive Forms">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-fluid">
+          <div class="field"  >
+            <label>ID:</label>
+            <input type="number" pInputText formControlName="id" />
+          </div>
+
+          <div class="field">
+            <label>Cedula:</label>
+            <input type="number" pInputText formControlName="cedula"/>
+          </div>
+          
+
+          <div class="field">
+            <label>Nombre:</label>
+            <input type="text" pInputText formControlName="nombre"/>
+          </div>
+
+          <div class="field">
+            <label>Apellido:</label>
+            <input type="text" pInputText formControlName="apellido"/>
+          </div>
+     
+        <!--   <div class="field">
+            <label>Semestre:</label>
+            <input type="text" pInputText formControlName="semestre"/>
+          </div> -->
+
+            <div class="col-md">
+            </div>
+            <div class="col-md">
+              <div class="form-floating">
+                <select class="form-select" id="floatingSelectGrid" formControlName="semestre">
+                  <option selected>Seleccionar Semestre</option>
+                  <option value="Primer Semestre">Primer Semestre</option>
+                  <option value="Segundo Semestre">Segundo Semestre</option>
+                  <option value="Tercer Semestre">Tercer Semestre</option>
+                  <option value="Cuarto Semestre">Cuarto Semestre</option>
+                  <option value="Quinto Semestre">Quinto Semestre</option>
+                </select>
+                <label for="floatingSelectGrid">Semestre</label>
+              </div>
+            </div>
+         
+
+
+
+          <div class="field">
+            <label>Correo:</label>
+            <input type="email"   pInputText formControlName="correo"/>
+          </div>
+      
+        <!--   <div class="field">
+            <label>Estado:</label>
+            <p-inputSwitch inputId="estado" formControlName="estado"></p-inputSwitch>
+          </div> -->
+
+        <!--   <div class="field">
+            <label>Tipo Usuario:</label>
+            <p-inputSwitch inputId="tipoUsuario" formControlName="tipoUsuario"></p-inputSwitch>
+          </div> -->
+
+          <div class="col-md">
+          </div>
+          <div class="col-md">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelectGrid" formControlName="tipoUsuario">
+                <option selected>Seleccionar Usuario</option>
+                <option value="Docente">Docente</option>
+                <option value="studiante">Estudiante</option>
+                <option value="Egresa">Egresado</option>
+              </select>
+              <label for="floatingSelectGrid">Tipo Usuario</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Clave:</label>
+            <input type="password" pInputText formControlName="clave"/>
+          </div>
+
+    
+          <div class="field">
+            <label>Periodo Voto:</label>
+            <p-calendar inputId="periodoVoto"
+                        formControlName="periodoVoto"
+                        [showIcon]="true"
+            ></p-calendar>
+          </div>
+
+          <div class="field">
+            <div class="field">
+              <label>Estado Voto:</label>
+              <p-inputSwitch inputId="estadoVoto" formControlName="estadoVoto"></p-inputSwitch>
+              <div class="field">
+                <label>Estado:</label>
+                <p-inputSwitch inputId="estado" formControlName="estado"></p-inputSwitch>
+              </div>
+            </div>
+          </div>
+
+          <div class="card flex justify-content-center">
+            <span class="p-buttonset">
+              <button pButton type="submit" label="Guardar"></button>
+              <button pButton pRipple label="Actualizar" icon="pi pi-check" (click)="actualizarVotante()" class="p-button-success"></button>
+              <button pButton pRipple label="Cancel" icon="pi pi-bookmark" label="Ver Listado" [routerLink]="['/votante-lista']"></button>
+            </span>
+        </div>
+        
+
+       <!--    <div class="field">
+            <button pButton type="submit" label="Guardar"></button>
+            <button pButton type="button" class="p-button-warning" label="Actualizar" (click)="actualizarVotante()"></button>
+            <button pButton type="button" class="p-button-success" label="Ver Listado" [routerLink]="['/votante-lista']"></button>
+          </div> -->
+        </form>
+      </p-panel>
+    </div>
+  </div>
+  

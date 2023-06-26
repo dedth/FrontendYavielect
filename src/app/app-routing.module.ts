@@ -1,27 +1,29 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import { AutomovilListComponent } from './automovil-list/automovil-list.component';
-import { AutomovilComponent } from './automovil/automovil.component';
-
-
-
+import { MenuComponent } from './menu/menu.component';
+import { VotanteListaComponent } from './votantes/votante-lista/votante-lista.component';
+import { VotanteComponent } from './votantes/votante/votante.component';
 
 const routes: Routes = [
+
+ /*  {
+    path: '',
+    component: VotanteComponent
+  }, */
  
   {
-    path: 'automovil-list',
-    component: AutomovilListComponent
+    path: 'menu',
+    component: MenuComponent
   },
-
   {
-    path: 'automovil',
-    component: AutomovilComponent
+    path: 'votante',
+    component: VotanteComponent
   },
-
-
-  
-
+  {
+    path: 'votante-lista',
+    component: VotanteListaComponent
+  },
 
 ];
 
