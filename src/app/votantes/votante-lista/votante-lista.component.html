@@ -1,3 +1,4 @@
+<div class="tabla">
 <p-table [value]="votantes" [tableStyle]="{'min-width': '30rem'}"
          selectionMode="single" [(selection)]="seleccionarVotante" dataKey="id" >
   <ng-template pTemplate="header">
@@ -42,4 +43,4 @@
 </p-table>
 {{seleccionarVotante | json}}
 <button pButton type="button" class="p-button-success" label="Crear Votante" (click)="crearVotante()"></button>
-
+</div>

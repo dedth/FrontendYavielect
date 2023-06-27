@@ -19,6 +19,11 @@ import { CascadeSelectModule } from 'primeng/cascadeselect';
 import {MenuComponent } from './menu/menu.component';
 import {VotanteComponent } from './votantes/votante/votante.component';
 import {VotanteListaComponent } from './votantes/votante-lista/votante-lista.component';
+import { CronogramaComponent } from './cronogramas/cronograma/cronograma.component';
+import { CronogramaListaComponent } from './cronogramas/cronograma-lista/cronograma-lista.component';
+import { AprobarComponent } from './aprobacion/aprobar/aprobar.component';
+import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.component';
+
 
 
 
@@ -30,6 +35,11 @@ import {VotanteListaComponent } from './votantes/votante-lista/votante-lista.com
     MenuComponent,
     VotanteComponent,
     VotanteListaComponent,
+    CronogramaComponent,
+    CronogramaListaComponent,
+    AprobarComponent,
+    AprobarListaComponent,
+
 
     
   ],
