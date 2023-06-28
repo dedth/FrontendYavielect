@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { VotantesService } from '../votante/votantes.service';
+import { VotantesService } from './votante/votantes.service';
+
 
 @Component({
   selector: 'app-votante-lista',

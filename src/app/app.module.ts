@@ -1,3 +1,4 @@
+
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,7 +19,7 @@ import { CascadeSelectModule } from 'primeng/cascadeselect';
 
 import {MenuComponent } from './menu/menu.component';
 import {VotanteComponent } from './votantes/votante/votante.component';
-import {VotanteListaComponent } from './votantes/votante-lista/votante-lista.component';
+
 import { CronogramaComponent } from './cronogramas/cronograma/cronograma.component';
 import { CronogramaListaComponent } from './cronogramas/cronograma-lista/cronograma-lista.component';
 import { AprobarComponent } from './aprobacion/aprobar/aprobar.component';
@@ -28,6 +29,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from  '@angular/common/http';
+import { VotanteListaComponent } from './votantes/votante-lista.component';
+
+
 
 
 

@@ -1,8 +1,9 @@
+import { LoginRequest } from './services/auth/loginRequest';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import { MenuComponent } from './menu/menu.component';
-import { VotanteListaComponent } from './votantes/votante-lista/votante-lista.component';
+
 import { VotanteComponent } from './votantes/votante/votante.component';
 import { CronogramaComponent } from './cronogramas/cronograma/cronograma.component';
 import { CronogramaListaComponent } from './cronogramas/cronograma-lista/cronograma-lista.component';
@@ -11,6 +12,7 @@ import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { VotanteListaComponent } from './votantes/votante-lista.component';
 
 const routes: Routes = [
 
@@ -29,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'votante-lista',
-    component: VotanteListaComponent
+    component: VotanteListaComponent 
   },
   {
     path: 'cronograma',
