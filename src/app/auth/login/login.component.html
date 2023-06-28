@@ -1,0 +1,40 @@
+<form [formGroup]="loginForm"><br>
+    <div class="login bg-secondary container" >
+    <div class="mb-3" ><br>
+      <label for="exampleInputEmail1" class="form-label">Email </label>
+      <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="text-danger">
+
+        <div *ngIf="email.errors?.['required']">
+            Email es requerido.
+        </div>
+        <div *ngIf="email.errors?.['email']">
+            El email tiene que tener un formato valido
+        </div>
+        </div>
+
+
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary"  (click)="login()" >Iniciar sesion</button><br><br>
+</div>
+    <div class="card text-center bg-secondary">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+      </div>
+  </form>
+
+
+
+  

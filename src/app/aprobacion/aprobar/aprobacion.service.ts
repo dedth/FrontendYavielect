@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class AprobacionService {
   aprobacion: any[] = [];
   seleccionarAprobar: any = null;
+  httpClient: any;
 
   constructor() { 
     this.cargarAprobacion();
@@ -33,5 +34,9 @@ export class AprobacionService {
     if(index > -1) {
       this.aprobacion.splice(index, 1);
     }
+  }
+
+  getAllCountries() {
+    return this.httpClient.get('http://localhost:3000/api/v1/lista/catalogue');
   }
 }

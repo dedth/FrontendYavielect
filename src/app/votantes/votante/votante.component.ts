@@ -9,6 +9,17 @@ import { VotantesService } from './votantes.service';
 })
 export class VotanteComponent  {
 
+  cedula: string = '';
+  nombre: number = 0;
+  apellido: Date = new Date();
+  semestre: string = '';
+  correo: string = '';
+  estado: boolean = false;
+  tipoUsuario: string = '';
+  clave: string = '';
+  estadoVoto: boolean = false;
+  periodoVoto: string = '';
+
   form: FormGroup;//Reactive Form
 
 
@@ -63,6 +74,12 @@ export class VotanteComponent  {
   actualizarVotante() {
     this.votantesService.actualizarVotante(this.idField.value, this.form.value);
     console.log(this.votantesService.votantes);
+  }
+
+  validateForm() {
+    if (this.cedula === '' && this.cedula.length <= 3) {
+
+    }
   }
 
   get idField() {

@@ -23,6 +23,12 @@ import { CronogramaComponent } from './cronogramas/cronograma/cronograma.compone
 import { CronogramaListaComponent } from './cronogramas/cronograma-lista/cronograma-lista.component';
 import { AprobarComponent } from './aprobacion/aprobar/aprobar.component';
 import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './auth/login/login.component';
+import { HttpClientModule } from  '@angular/common/http';
+
 
 
 
@@ -39,6 +45,10 @@ import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.
     CronogramaListaComponent,
     AprobarComponent,
     AprobarListaComponent,
+    HeaderComponent,
+    FooterComponent,
+    DashboardComponent,
+    LoginComponent,
 
 
     
@@ -59,7 +69,9 @@ import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.
     PanelModule,
     TableModule,
     CascadeSelectModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

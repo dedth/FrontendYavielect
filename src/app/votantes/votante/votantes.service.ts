@@ -8,6 +8,7 @@ export class VotantesService {
   
   votantes: any[] = [];
   seleccionarVotante: any = null;
+  httpClient: any;
 
   constructor() { 
     this.cargarVotantes();
@@ -35,5 +36,9 @@ export class VotantesService {
     if(index > -1) {
       this.votantes.splice(index, 1);
     }
+  }
+
+  getAllCountries() {
+    return this.httpClient.get('http://localhost:3000/api/v1/votantes/catalogue');
   }
 }

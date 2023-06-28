@@ -100,15 +100,9 @@
               <button pButton pRipple label="Cancel" icon="pi pi-bookmark" label="Ver Listado" [routerLink]="['/votante-lista']"></button>
             </span>
         </div>
-        
-
-       <!--    <div class="field">
-            <button pButton type="submit" label="Guardar"></button>
-            <button pButton type="button" class="p-button-warning" label="Actualizar" (click)="actualizarVotante()"></button>
-            <button pButton type="button" class="p-button-success" label="Ver Listado" [routerLink]="['/votante-lista']"></button>
-          </div> -->
         </form>
       </p-panel>
     </div>
   </div>
+   {{form.value|json}}
   

@@ -7,6 +7,7 @@ export class CronogramasService {
  
   cronogramas: any[] = [];
   seleccionarCronograma: any = null;
+  httpClient: any;
 
   constructor() { 
     this.cargarCronogramas();
@@ -34,5 +35,9 @@ export class CronogramasService {
     if(index > -1) {
       this.cronogramas.splice(index, 1);
     }
+  }
+
+  getAllCountries() {
+    return this.httpClient.get('http://localhost:3000/api/v1/cronograma/cdetallecronograma');
   }
 }

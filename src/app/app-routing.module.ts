@@ -8,6 +8,9 @@ import { CronogramaComponent } from './cronogramas/cronograma/cronograma.compone
 import { CronogramaListaComponent } from './cronogramas/cronograma-lista/cronograma-lista.component';
 import { AprobarComponent } from './aprobacion/aprobar/aprobar.component';
 import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './auth/login/login.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 const routes: Routes = [
 
@@ -43,6 +46,27 @@ const routes: Routes = [
   {
     path: 'aprobar-lista',
     component: AprobarListaComponent
+  },
+
+
+  ///INICIO 
+
+  {
+    path: '',
+    redirectTo:'/login', pathMatch:'full'
+  },
+
+  {
+    path: 'inicio',
+    component: DashboardComponent
+  },
+  {
+    path: 'footer',
+    component: FooterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
 
 ];

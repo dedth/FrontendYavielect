@@ -9,6 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AprobarComponent {
 
+  nombreLista: string = '';
+  eslogan: string = '';
+  planTrabajo: string = '';
+  color: string = '';
+  numero: number = 0;
+  logo: string = '';
+  estadoLista: boolean = false;
+  
+
   form: FormGroup;//Reactive Form
 
   constructor(private formBuilder: FormBuilder, private aprobacionService: AprobacionService) {
@@ -56,6 +65,12 @@ export class AprobarComponent {
   actualizarAprobar() {
     this.aprobacionService.actualizarAprobar(this.idField.value, this.form.value);
     console.log(this.aprobacionService.aprobacion);
+  }
+
+  validateForm() {
+    if (this.nombreLista === '' && this.nombreLista.length <= 3) {
+
+    }
   }
 
   get idField() {
