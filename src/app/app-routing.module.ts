@@ -60,10 +60,10 @@ const routes: Routes = [
     path: 'inicio',
     component: DashboardComponent
   },
-  {
+/*   {
     path: 'footer',
     component: FooterComponent
-  },
+  }, */
   {
     path: 'login',
     component: LoginComponent

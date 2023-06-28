@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent  {
-  
+
+    loginError:string='';
     loginForm=this.formBuilder.group({
     email:['admin@gmail.com',[Validators.required,Validators.email]],
     password:['',Validators.required],
@@ -36,13 +37,15 @@ export class LoginComponent  {
         },
         error: (errorData) => {
           console.log(errorData);
+          this.loginError=errorData;
         },
         complete: () => {
           console.log("login completo");
+          this.router.navigateByUrl('/menu')
+          this.loginForm.reset();
         }
       });
-      this.router.navigateByUrl('/menu')
-      this.loginForm.reset();
+     
 
     } else {
       this.loginForm.markAsTouched();
