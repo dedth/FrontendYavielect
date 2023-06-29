@@ -1,3 +1,4 @@
+<app-menu></app-menu><br>
 <div class="formgrid grid  formulario " >
     <div class="col-6">
       <p-panel header="Reactive Forms">
@@ -17,7 +18,7 @@
       
           <div class="field">
             <label>Fecha de la Creación del Cronograma:</label>
-            <p-calendar inputId="fechaCreaciónCronograma"
+            <p-calendar inputId="fechaCreación"
                         formControlName="fechaCreación"
                         [showIcon]="true"
             ></p-calendar>
@@ -33,14 +34,14 @@
             <span class="p-buttonset">
               <button pButton type="submit" label="Guardar"></button>
               <button pButton pRipple label="Actualizar" icon="pi pi-check" (click)="actualizarCronograma()" class="p-button-success"></button>
-              <button pButton pRipple label="Cancel" icon="pi pi-bookmark" label="Ver Listado" [routerLink]="['/votante-lista']"></button>
+              <button pButton pRipple label="Cancel" icon="pi pi-bookmark" label="Ver Listado" [routerLink]="['/cronograma-lista']"></button>
             </span>
         </div>
         </form>
       </p-panel>
     </div>
   </div>
-  {{form.value|json}}
+  
   
 
  

@@ -15,7 +15,7 @@ export class VotanteListaComponent {
 
  constructor(private votantesService:VotantesService, private router: Router){
   this.votantes = this.votantesService.votantes;
-  this.getAllCountries();
+  /* this.getAllCountries(); */
   }
 
 
@@ -34,7 +34,7 @@ export class VotanteListaComponent {
     console.log(this.votantesService.votantes);
   }
 
-  getAllCountries() {
+ /*  getAllCountries() {
     console.log('1');
 
     this.votantesService.getAllCountries().subscribe(
@@ -46,6 +46,6 @@ export class VotanteListaComponent {
     );
 
     console.log('3');
-  }
+  } */
 
 }

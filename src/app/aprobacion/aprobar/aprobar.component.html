@@ -4,9 +4,6 @@
       <p-panel header="Reactive Forms">
         <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-fluid">
 
-
-
-
           <div class="row g-3">
             <div class="col">
               <label>ID:</label>
@@ -23,7 +20,7 @@
           <div class="row g-3">
             <div class="col">
               <label>Eslogan:</label>
-              <input type="number" class="form-control" formControlName="eslogan" 
+              <input type="text" class="form-control" formControlName="eslogan" 
                aria-label="First name">
             </div>
             <div class="col">
@@ -68,6 +65,6 @@
       </p-panel>
     </div>
   </div>
-  {{form.value|json}}
+ 
 
   

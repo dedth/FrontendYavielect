@@ -28,7 +28,6 @@ export class CronogramaComponent {
       });
     } else {
       this.form = formBuilder.group({
-        id: [0],
         periodoLectivo: ['', [Validators.required, Validators.minLength(10)]],
         fechaCreacion: ['', [Validators.required]],
         creador: ['', [Validators.required]],

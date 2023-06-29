@@ -14,8 +14,8 @@ import {CalendarModule} from "primeng/calendar";
 import {PanelModule} from "primeng/panel";
 import {TableModule} from "primeng/table";
 import {MegaMenuModule } from 'primeng/megamenu';
-import {RouterModule } from '@angular/router';
-import { CascadeSelectModule } from 'primeng/cascadeselect';
+
+import {CascadeSelectModule } from 'primeng/cascadeselect';
 
 import {MenuComponent } from './menu/menu.component';
 import {VotanteComponent } from './votantes/votante/votante.component';
@@ -24,19 +24,11 @@ import { CronogramaComponent } from './cronogramas/cronograma/cronograma.compone
 import { CronogramaListaComponent } from './cronogramas/cronograma-lista/cronograma-lista.component';
 import { AprobarComponent } from './aprobacion/aprobar/aprobar.component';
 import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
+
 import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { VotanteListaComponent } from './votantes/votante-lista.component';
-
-
-
-
-
-
-
 
 
 @NgModule({
@@ -49,9 +41,6 @@ import { VotanteListaComponent } from './votantes/votante-lista.component';
     CronogramaListaComponent,
     AprobarComponent,
     AprobarListaComponent,
-    HeaderComponent,
-    FooterComponent,
-    DashboardComponent,
     LoginComponent,
 
 
@@ -73,7 +62,6 @@ import { VotanteListaComponent } from './votantes/votante-lista.component';
     PanelModule,
     TableModule,
     CascadeSelectModule,
-    RouterModule,
     HttpClientModule
 
   ],

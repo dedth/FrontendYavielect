@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VotantesService } from './votantes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-votante',
@@ -23,7 +24,8 @@ export class VotanteComponent  {
   form: FormGroup;//Reactive Form
 
 
-  constructor(private formBuilder: FormBuilder, private votantesService: VotantesService) {
+  constructor(private formBuilder: FormBuilder, private votantesService: VotantesService ,
+     private router: Router) {
     if (this.votantesService.seleccionarVotante) {
       const votanteSeleccionado = this.votantesService.seleccionarVotante;
       this.form = formBuilder.group({

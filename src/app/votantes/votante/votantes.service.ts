@@ -38,7 +38,7 @@ export class VotantesService {
     }
   }
 
-  getAllCountries() {
+/*   getAllCountries() {
     return this.httpClient.get('http://localhost:3000/api/v1/votantes/catalogue');
-  }
+  } */
 }

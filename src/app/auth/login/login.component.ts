@@ -14,7 +14,7 @@ export class LoginComponent  {
     loginError:string='';
     loginForm=this.formBuilder.group({
     email:['admin@gmail.com',[Validators.required,Validators.email]],
-    password:['',Validators.required],
+    password:['123',Validators.required],
   })
   constructor(private formBuilder:FormBuilder, private router:Router,private loginService:LoginService){}
 

@@ -1,13 +1,16 @@
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { LoginRequest } from './loginRequest';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
 import { User } from './usuario'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+
+  currentUserLoginOn: BehaviorSubject<boolean>=new  BehaviorSubject <boolean>(false);
+  currentUserData: BehaviorSubject<User>=new  BehaviorSubject <User>({id:0, email:''});
 
   constructor(private http: HttpClient) { }
 
