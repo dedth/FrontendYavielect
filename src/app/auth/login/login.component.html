@@ -1,6 +1,6 @@
-<form [formGroup]="loginForm"><br>
+<form [formGroup]="loginForm"  ><br>
   <p class="text-danger">{{loginError}}</p>
-    <div class="login bg-light container" >
+    <div class="login " >
     <div class="mb-3" ><br>
       <img alt="" src="./assets/imagenes/logo yavic.png"><br>
       <label for="exampleInputEmail1" class="form-label">Email </label>
@@ -23,19 +23,21 @@
       <input type="password" class="form-control" formControlName="password">
     </div>
 
-    <button type="submit" class="btn btn-primary"  (click)="login()" >Iniciar sesion</button><br><br>
+    <button type="submit" class="btn btn-primary" (click)="login()" >Iniciar sesion</button><br><br>
+    <a class="dropdown-item text-center" routerLink="/register" >Registrar Usuario</a>
 </div>
     <div class="card text-center  piePagina">
         <div class="card-header">
-          Yavic-Elect
+          Yavic e-Leccion
         </div>
         <div class="card-body">
           <h5 class="card-title">Votaciones 2023</h5>
-          <p class="card-text">Yavirack Quito-Ecuador 2023 .</p>
+          <p class="card-text">Yavirac Quito-Ecuador 2023 .</p>
           
         </div>
       </div>
   </form>
+  <!-- [disabled]="loginForm.invalid" -->
 
 
 

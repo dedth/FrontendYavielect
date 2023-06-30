@@ -10,11 +10,11 @@
       <th>Apellido</th>
       <th>Semestre</th>
       <th>Correo</th>
-      <th>Estado Usuario</th>
       <th>Tipo Usuario</th>
       <th>Clave</th>
-      <th>Estado Voto</th>
       <th>Periodo Voto</th>
+      <th>Estado Voto</th>
+      <th>Estado Usuario</th>
       
     </tr>
   </ng-template>
@@ -22,16 +22,16 @@
     <tr [pSelectableRow]="item">
       <td>{{item.id}}</td>
       <td>{{item.cedula}}</td>
-      <td>{{item.nombre}}</td>
-      <td>{{item.apellido}}</td>
+      <td>{{item.nombreUsuario}}</td>
+      <td>{{item.apellidoUsuario}}</td>
       <td>{{item.semestre}}</td>
       <td>{{item.correo}}</td>
-      <td>{{item.estado}}</td>
       <td>{{item.tipoUsuario}}</td>
-      <td>{{item.clave}}</td>
+      <td>{{item.claveUsuario}}</td>
+      <td>{{item.periodoUltimoVoto}}</td>
       <td>{{item.estadoVoto}}</td>
-      <td>{{item.periodoVoto}}</td>
-      <td>{{item.periodoVotos}}</td>
+      <td>{{item.estadoUsuario}}</td>
+      
 
       <td>
         <button pButton type="button" class="p-button-warning" icon="pi pi-pencil"

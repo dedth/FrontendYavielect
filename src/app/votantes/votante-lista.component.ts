@@ -15,7 +15,7 @@ export class VotanteListaComponent {
 
  constructor(private votantesService:VotantesService, private router: Router){
   this.votantes = this.votantesService.votantes;
-  /* this.getAllCountries(); */
+  /* this.getAllVotantes(); */
   }
 
 
@@ -34,10 +34,10 @@ export class VotanteListaComponent {
     console.log(this.votantesService.votantes);
   }
 
- /*  getAllCountries() {
+ /*  getAllVotantes() {
     console.log('1');
 
-    this.votantesService.getAllCountries().subscribe(
+    this.votantesService.getAllVotantes().subscribe(
       (      response: any) => {
         console.log(response);
       }, (error: any) => {

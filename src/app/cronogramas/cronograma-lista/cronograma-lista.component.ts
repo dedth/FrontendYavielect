@@ -14,7 +14,7 @@ export class CronogramaListaComponent {
 
  constructor(private cronogramasService:CronogramasService, private router: Router){
   this.cronogramas = this.cronogramasService.cronogramas;
- /*  this.getAllCountries(); */
+ /*  this.getAllCronogramas(); */
   }
 
   crearCronograma() {
@@ -32,10 +32,10 @@ export class CronogramaListaComponent {
     console.log(this.cronogramasService.cronogramas);
   }
 
- /*  getAllCountries() {
+ /*  getAllCronogramas() {
     console.log('1');
 
-    this.cronogramasService.getAllCountries().subscribe(
+    this.cronogramasService.getAllCronogramas().subscribe(
       (      response: any) => {
         console.log(response);
       }, (error: any) => {

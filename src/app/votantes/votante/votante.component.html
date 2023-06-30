@@ -21,12 +21,12 @@
           <div class="row g-3">
             <div class="col">
               <label>Nombre:</label>
-              <input type="text" class="form-control" formControlName="nombre" 
+              <input type="text" class="form-control" formControlName="nombreUsuario" 
                aria-label="First name">
             </div>
             <div class="col">
               <label>Apellido:</label>
-              <input type="text" class="form-control" formControlName="apellido" 
+              <input type="text" class="form-control" formControlName="apellidoUsuario" 
               aria-label="Last name">
             </div>
           </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="col">
               <label>Clave:</label>
-              <input type="password"  class="form-control" formControlName="clave" 
+              <input type="password"  class="form-control" formControlName="claveUsuario" 
                aria-label="First name">
             </div>
            
@@ -74,8 +74,8 @@
 
           <div class="field">
             <label>Periodo Voto:</label>
-            <p-calendar inputId="periodoVoto"
-                        formControlName="periodoVoto"
+            <p-calendar inputId="periodoUltimoVoto"
+                        formControlName="periodoUltimoVoto"
                         [showIcon]="true"
             ></p-calendar>
           </div>
@@ -87,7 +87,7 @@
               <p-inputSwitch inputId="estadoVoto" formControlName="estadoVoto"></p-inputSwitch>
               <div class="col">
                 <label>Estado:</label>
-                <p-inputSwitch inputId="estado" formControlName="estado"></p-inputSwitch>
+                <p-inputSwitch inputId="estadoUsuario" formControlName="estadoUsuario"></p-inputSwitch>
               </div>
             </div>
           </div>

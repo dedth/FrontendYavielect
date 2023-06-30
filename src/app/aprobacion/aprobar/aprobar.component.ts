@@ -10,11 +10,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AprobarComponent {
 
   nombreLista: string = '';
-  eslogan: string = '';
-  planTrabajo: string = '';
-  color: string = '';
-  numero: number = 0;
-  logo: string = '';
+  esloganLista: string = '';
+  planTrabajoLista: string = '';
+  colorLista: string = '';
+  numeroLista: number = 0;
+  logoLista: string = '';
   estadoLista: boolean = false;
   
 
@@ -26,22 +26,22 @@ export class AprobarComponent {
       this.form = formBuilder.group({
         id: [aprobacionSeleccionado.id],
         nombreLista: [aprobacionSeleccionado.nombreLista, [Validators.required]],
-        eslogan: [aprobacionSeleccionado.eslogan, [Validators.required]],
-        planTrabajo: [aprobacionSeleccionado.planTrabajo, [Validators.required, Validators.min(1)]],
-        color: [aprobacionSeleccionado.color, [Validators.required]],
-        numero: [aprobacionSeleccionado.numero , [Validators.required]],
-        logo: [aprobacionSeleccionado.logo, ],
+        esloganLista: [aprobacionSeleccionado.esloganLista, [Validators.required]],
+        planTrabajoLista: [aprobacionSeleccionado.planTrabajoLista, [Validators.required, Validators.min(1)]],
+        colorLista: [aprobacionSeleccionado.colorLista, [Validators.required]],
+        numeroLista: [aprobacionSeleccionado.numeroLista , [Validators.required]],
+        logoLista: [aprobacionSeleccionado.logoLista, ],
         estadoLista: [aprobacionSeleccionado.estadoLista, [Validators.required, Validators.minLength(5)]]
       });
     } else {
       this.form = formBuilder.group({
         id: [0],
         nombreLista: ['', [Validators.required]],
-        eslogan: ['', [Validators.required]],
-        planTrabajo: ['', [Validators.required]],
-        color: ['', [Validators.required]],
-        numero: ['', [Validators.required, Validators.minLength(5)]],
-        logo: ['', [Validators.required]],
+        esloganLista: ['', [Validators.required]],
+        planTrabajoLista: ['', [Validators.required]],
+        colorLista: ['', [Validators.required]],
+        numeroLista: ['', [Validators.required, Validators.minLength(5)]],
+        logoLista: ['', [Validators.required]],
         estadoLista: [false, []],
         
       });
@@ -53,7 +53,7 @@ export class AprobarComponent {
     if (this.form.valid) {
       this.añadirAprobar();
     } else {
-      alert('Formulario No Valido');
+      alert('Formulario No Válido');
     }
   }
 

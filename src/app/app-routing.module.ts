@@ -10,12 +10,17 @@ import { AprobarComponent } from './aprobacion/aprobar/aprobar.component';
 import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.component';
 import { LoginComponent } from './auth/login/login.component';
 import { VotanteListaComponent } from './votantes/votante-lista.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'menu',

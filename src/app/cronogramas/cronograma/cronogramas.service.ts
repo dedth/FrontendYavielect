@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,8 +17,8 @@ export class CronogramasService {
   private cargarCronogramas() {
     this.cronogramas = [];
     this.cronogramas.push(
-      { id: 1, periodoLectivo: '2023', fechaCreacion: '02-09-2023',  creador: 'Pedro'},
-      { id: 2, periodoLectivo: '2022', fechaCreacion: '12-10.2022', creador: 'Carlos'}
+      { id: 1, periodoLectivo: '2023', fechaCreacionCronograma: '02-09-2023',  cresponsableCronograma: 'Pedro'},
+      { id: 2, periodoLectivo: '2022', fechaCreacionCronograma: '12-10.2022', cresponsableCronograma: 'Carlos'}
     );
   }
   
@@ -37,7 +38,7 @@ export class CronogramasService {
     }
   }
 
-/*   getAllCountries() {
-    return this.httpClient.get('http://localhost:3000/api/v1/cronograma/cdetallecronograma');
-  } */
+  getAllCronogramas() {
+    return this.httpClient.get('http://localhost:3000/api/v1/cronogramas');
+  }
 }

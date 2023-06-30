@@ -17,8 +17,8 @@ export class VotantesService {
   private cargarVotantes() {
     this.votantes = [];
     this.votantes.push(
-      { id: 1, cedula: '1789456198', nombre: 'Pedro', apellido: 'Flores', semestre: 'CUARTO', correo: 'f.pedro@yavirac.edu.ec', estado: 'ACTIVO', tipoUsuario: 'Estudiante', clave: '75gg', estadoVoto: 'Votado', periodoVoto: '2019' },
-      { id: 2, cedula: '1745821457', nombre: 'Carlos', apellido: 'Ramos', semestre: 'CUARTO', correo: 'r.carlos@yavirac.edu.ec', estado: 'ACTIVO', tipoUsuario: 'Estudiante', clave: '85hh', estadoVoto: 'No votado',  periodoVoto: '2023' }
+      { id: 1, cedula: '1789456198', nombreUsuario: 'Pedro', apellidoUsuario: 'Flores', semestre: 'CUARTO', correo: 'f.pedro@yavirac.edu.ec', tipoUsuario: 'Estudiante', claveUsuario: '75gg', periodoUltimoVoto: '2019' , estadoVoto: 'Votado', estadoUsuario: 'ACTIVO',    },
+      { id: 2, cedula: '1745821457', nombreUsuario: 'Carlos', apellidoUsuario: 'Ramos', semestre: 'CUARTO', correo: 'r.carlos@yavirac.edu.ec', tipoUsuario: 'Estudiante', claveUsuario: '85hh', periodoUltimoVoto: '2023', estadoVoto: 'No votado',  estadoUsuario: 'ACTIVO',     }
     );
   }
   
@@ -38,7 +38,7 @@ export class VotantesService {
     }
   }
 
-/*   getAllCountries() {
-    return this.httpClient.get('http://localhost:3000/api/v1/votantes/catalogue');
+/*   getAllVotantes() {
+    return this.httpClient.get('http://localhost:3000/api/v1/votantes');
   } */
 }

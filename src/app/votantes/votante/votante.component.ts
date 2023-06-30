@@ -11,15 +11,15 @@ import { Router } from '@angular/router';
 export class VotanteComponent  {
 
   cedula: string = '';
-  nombre: number = 0;
-  apellido: Date = new Date();
+  nombreUsuario: number = 0;
+  apellidoUsuario: Date = new Date();
   semestre: string = '';
   correo: string = '';
-  estado: boolean = false;
-  tipoUsuario: string = '';
-  clave: string = '';
   estadoVoto: boolean = false;
-  periodoVoto: string = '';
+  tipoUsuario: string = '';
+  claveUsuario: string = '';
+  estadoUsuario: boolean = false;
+  periodoUltimoVoto: string = '';
 
   form: FormGroup;//Reactive Form
 
@@ -31,29 +31,29 @@ export class VotanteComponent  {
       this.form = formBuilder.group({
         id: [votanteSeleccionado.id],
         cedula: [votanteSeleccionado.cedula, [Validators.required, Validators.min(10)]],
-        nombre: [votanteSeleccionado.nombre, [Validators.required]],
-        apellido: [votanteSeleccionado.apellido, [Validators.required, Validators.min(1)]],
+        nombreUsuario: [votanteSeleccionado.nombreUsuario, [Validators.required]],
+        apellidoUsuario: [votanteSeleccionado.apellidoUsuario, [Validators.required, Validators.min(1)]],
         semestre: [votanteSeleccionado.semestre, [Validators.required]],
         correo: [votanteSeleccionado.correo , [Validators.required]],
-        estado: [votanteSeleccionado.estado, ],
         tipoUsuario: [votanteSeleccionado.tipoUsuario, [Validators.required, Validators.minLength(5)]],
-        clave: [votanteSeleccionado.clave, [Validators.required, Validators.minLength(3)]],
+        claveUsuario: [votanteSeleccionado.claveUsuario, [Validators.required, Validators.minLength(3)]],
+        periodoUltimoVoto: [votanteSeleccionado.periodoUltimoVoto, ],
         estadoVoto: [votanteSeleccionado.estadoVoto, ],
-        periodoVoto: [votanteSeleccionado.periodoVoto, ],
+        estadoUsuario: [votanteSeleccionado.estadoUsuario, ],
       });
     } else {
       this.form = formBuilder.group({
         id: [0],
         cedula: ['', [Validators.required, Validators.minLength(10)]],
-        nombre: ['', [Validators.required]],
-        apellido: ['', [Validators.required]],
+        nombreUsuario: ['', [Validators.required]],
+        apellidoUsuario: ['', [Validators.required]],
         semestre: ['', [Validators.required]],
         correo: ['', [Validators.required, Validators.email]],
-        estado: [false, []],
         tipoUsuario: ['', [Validators.required, Validators.minLength(5)]],
-        clave: ['', [Validators.required, Validators.min(3)]],
+        claveUsuario: ['', [Validators.required, Validators.min(3)]],
+        periodoUltimoVoto: [new Date()],
         estadoVoto: [false, []],
-        periodoVoto: [new Date()],
+        estadoUsuario: [false, []],
         
       });
     }

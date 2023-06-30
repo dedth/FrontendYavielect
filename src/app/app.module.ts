@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
+
 import {AppComponent} from './app.component';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
@@ -29,6 +30,8 @@ import { AprobarListaComponent } from './aprobacion/aprobar-lista/aprobar-lista.
 import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { VotanteListaComponent } from './votantes/votante-lista.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 @NgModule({
@@ -42,6 +45,8 @@ import { VotanteListaComponent } from './votantes/votante-lista.component';
     AprobarComponent,
     AprobarListaComponent,
     LoginComponent,
+    RegisterComponent,
+   
 
 
     
@@ -62,7 +67,8 @@ import { VotanteListaComponent } from './votantes/votante-lista.component';
     PanelModule,
     TableModule,
     CascadeSelectModule,
-    HttpClientModule
+    HttpClientModule,
+
 
   ],
   providers: [],

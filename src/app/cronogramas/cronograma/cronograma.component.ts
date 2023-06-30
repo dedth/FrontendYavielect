@@ -10,8 +10,8 @@ import { CronogramasService } from './cronogramas.service';
 export class CronogramaComponent {
 
   periodoLectivo: Date = new Date();
-  fechaCreacion: Date = new Date();
-  creador: string = '';
+  fechaCreacionCronograma: Date = new Date();
+  responsableCronograma: string = '';
 
   form: FormGroup;//Reactive Form
 
@@ -22,15 +22,15 @@ export class CronogramaComponent {
       this.form = formBuilder.group({
         id: [0],
         periodoLectivo: [cronogramaSeleccionado.periodoLectivo],
-        fechaCreacion: [cronogramaSeleccionado.fechaCreacion,],
-        creador: [cronogramaSeleccionado.creador, [Validators.required]],
+        fechaCreacionCronograma: [cronogramaSeleccionado.fechaCreacionCronograma,],
+        responsableCronograma: [cronogramaSeleccionado.responsableCronograma, [Validators.required]],
       
       });
     } else {
       this.form = formBuilder.group({
         periodoLectivo: ['', [Validators.required, Validators.minLength(10)]],
-        fechaCreacion: ['', [Validators.required]],
-        creador: ['', [Validators.required]],
+        fechaCreacionCronograma: ['', [Validators.required]],
+        responsableCronograma: ['', [Validators.required]],
        
       });
     }
@@ -56,7 +56,7 @@ export class CronogramaComponent {
   }
 
   validateForm() {
-    if (this.creador === '' && this.creador.length <= 3) {
+    if (this.responsableCronograma === '' && this.responsableCronograma.length <= 3) {
 
     }
   }

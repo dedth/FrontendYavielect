@@ -15,8 +15,8 @@ export class AprobacionService {
   private cargarAprobacion() {
     this.aprobacion = [];
     this.aprobacion.push(
-      { id: 1, nombreLista: 'Lista a', eslogan: 'union', planTrabajo: 'Flores', color: 'CUARTO', numero: 1, logo: 'url', estadoLista: 'True'},
-      { id: 2, nombreLista: 'Lista b', eslogan: 'Todos somo uno', planTrabajo: 'Ramos', color: 'CUARTO', numero: 5, logo: 'url', estadoLista: 'False' }
+      { id: 1, nombreLista: 'Lista a', esloganLista: 'union', planTrabajoLista: 'Flores', colorLista: 'CUARTO', numeroLista: 1, logoLista: 'url', estadoLista: 'True'},
+      { id: 2, nombreLista: 'Lista b', esloganLista: 'Todos somo uno', planTrabajoLista: 'Ramos', colorLista: 'CUARTO', numeroLista: 5, logoLista: 'url', estadoLista: 'False' }
     );
   }
   
@@ -36,7 +36,7 @@ export class AprobacionService {
     }
   }
 
-  getAllCountries() {
+  getAllAprobaciones() {
     return this.httpClient.get('http://localhost:3000/api/v1/lista/catalogue');
   }
 }

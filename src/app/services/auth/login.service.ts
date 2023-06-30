@@ -18,7 +18,7 @@ export class LoginService {
    return  this.http.get<User>('././assets/data.json').pipe(
     catchError(this.handleError)
    )
-    /* ('http://localhost:3000/api/v1/usurios/catalogue') */
+    /* ('http://localhost:3000/api/v1/usurios') */
 
   }
 
