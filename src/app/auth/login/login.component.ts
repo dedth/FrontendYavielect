@@ -1,65 +1,65 @@
-import { LoginRequest } from './../../services/auth/loginRequest';
-import { LoginService } from 'src/app/services/auth/login.service';
-import { Component} from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent  {
+export class LoginComponent implements OnInit  {
 
-    loginError:string='';
-    loginForm=this.formBuilder.group({
-    email:['admin@gmail.com',[Validators.required,Validators.email]],
-    password:['123',Validators.required],
-  })
-  constructor(private formBuilder:FormBuilder, private router:Router,private loginService:LoginService){}
+  loginForm!: FormGroup;
+  toastr: any;
+  
 
-  ngonInit():void{
+  constructor(private formBuilder: FormBuilder, private authService: AuthService,
+     private router:Router
+    ) { }
 
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
-  get email(){
-    return this.loginForm.controls.email;
-  }
-  get password(){
-    return this.loginForm.controls.password;
-  }
-
-  login(){
-    if (this.loginForm.valid){
-      this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
-        next: (userData) => {
-          console.log(userData);
-        },
-        error: (errorData) => {
-          console.log(errorData);
-          this.loginError=errorData;
-        },
-        complete: () => {
-          console.log("login completo");
-          this.router.navigateByUrl('/menu')
-          this.loginForm.reset();
-        }
-      });
-     
-
-    } else {
-      this.loginForm.markAsTouched();
-     /*  alert("error de datos "); */
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Datos incorrectos!',
-        
-      })
+  submitLoginForm() {
+    if (this.loginForm.valid) {
+      const username = this.loginForm.value.username;
+      const password = this.loginForm.value.password;
+      this.authService.login(username, password)
+        .subscribe(
+          response => {
+            this.handleLoginSuccess(response);
+          },
+          error => {
+            this.handleLoginError(error);
+          }
+        );
     }
+  }
+  
+  handleLoginError(error: any) {
+    // Lógica para manejar errores, como mostrar un mensaje de error al usuario.
+    console.log('Error en el inicio de sesión:', error);
+    // Puedes mostrar un mensaje de error en el formulario o utilizar una librería de notificaciones como ngx-toastr, por ejemplo:
+    this.toastr.error('Error en el inicio de sesión. Verifica tus credenciales.', 'Error');
+  }
+  
+  handleLoginSuccess(response: any) {
+    // Lógica para manejar la respuesta del backend, como guardar el token de autenticación.
+    const authToken = response.token;
+    // Guarda el token en el almacenamiento local o en una variable de estado
+    localStorage.setItem('authToken', authToken);
+    // Redirige al usuario a otra página o realiza otras acciones necesarias
+    this.router.navigate(['/menu']);
+  }
   }
  
 
   
-}
+
